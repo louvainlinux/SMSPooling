@@ -12,6 +12,6 @@ Todo:
 - [x] adding participant to pool
 - [x] enable pool to vote
 - [x] vote registration
-- [] delete a participant
-- [] delete a pool
-- [] prettify the app
+- [ ] delete a participant
+- [ ] delete a pool
+- [ ] prettify the app
