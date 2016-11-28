@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.kap.louvainlinux.ludovic.smspooling.ParticipantList"
+    tools:showIn="@layout/activity_participant_list">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_participant_list"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+<android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/toolbar_participant_list"
+        android:id="@+id/cardList_participant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/participant_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        app:layout_anchor="@id/cardList_participant"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_behavior="com.codepath.floatingactionbuttontest.ScrollAwareFABBehavior"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>
