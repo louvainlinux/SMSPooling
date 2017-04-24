@@ -97,7 +97,7 @@ public class DBHelper extends SQLiteOpenHelper{
                         " FOREIGN KEY (" + COLUMN_M2M_POOL_NAME + ") REFERENCES " + TABLE_NAME_POOL + "(" + COLUMN_POOL_NAME + ")" +
                         ")"
         );
-        sqLiteDatabase.close();
+//        sqLiteDatabase.close();
     }
 
     /**
@@ -153,7 +153,9 @@ public class DBHelper extends SQLiteOpenHelper{
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_APPLICATION + " WHERE " + COLUMN_APPLICATION_ID + "=" + 1 + "", null);
         cursor.moveToFirst();
         String pool = cursor.getString(cursor.getColumnIndex(COLUMN_APPLICATION_POOL));
-        cursor.close();
+        if(cursor != null && !cursor.isClosed()) {
+            cursor.close();
+        }
         db.close();
         return pool.equals("") ? null : pool;
     }
@@ -267,7 +269,9 @@ public class DBHelper extends SQLiteOpenHelper{
                     cursor.getString(cursor.getColumnIndex(COLUMN_POOL_DATE))));
             cursor.moveToNext();
         }
-        cursor.close();
+        if(cursor != null && !cursor.isClosed()) {
+            cursor.close();
+        }
         db.close();
         return pools;
     }
@@ -319,7 +323,9 @@ public class DBHelper extends SQLiteOpenHelper{
                     cursor.getString(cursor.getColumnIndex(COLUMN_PARTICIPANT_POOL)),
                     cursor.getInt(cursor.getColumnIndex(COLUMN_PARTICIPANT_ID))
             );
-            cursor.close();
+            if(cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
         }
         db.close();
         return participant;
@@ -340,7 +346,9 @@ public class DBHelper extends SQLiteOpenHelper{
                     cursor.getString(cursor.getColumnIndex(COLUMN_PARTICIPANT_POOL)),
                     cursor.getInt(cursor.getColumnIndex(COLUMN_PARTICIPANT_ID))
             );
-            cursor.close();
+            if(cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
         }
         else {
             Log.e("DBHelper", "Too many participant with the same number...");
@@ -370,7 +378,9 @@ public class DBHelper extends SQLiteOpenHelper{
             ));
             cursor.moveToNext();
         }
-        cursor.close();
+        if(cursor != null && !cursor.isClosed()) {
+            cursor.close();
+        }
         db.close();
         return participants;
     }
@@ -524,7 +534,10 @@ public class DBHelper extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME_PHONE + " WHERE " + COLUMN_PHONE_NUMBER + "='" + phone + "'", null);
         boolean isThere = (cursor.getCount() > 0) ? true : false;
-        cursor.close();
+
+        if(cursor != null && !cursor.isClosed()){
+            cursor.close();
+        }
         db.close();
         return isThere;
     }

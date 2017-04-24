@@ -28,18 +28,18 @@ public class SMSPoolingApplication extends Application {
         // Test if db
         //testDB(dbHelper);
         // Fin Test
-        dbHelper.insertPool("pooling 1", "2016.11.28 23:30");
-        dbHelper.insertPool("pooling 2", "2016.11.28 23:30");
-        dbHelper.insertPool("pooling 3", "2016.11.28 23:30");
-        dbHelper.insertPool("pooling 4", "2016.11.28 23:30");
-        dbHelper.insertPool("pooling 6", "2016.11.28 23:30");
-        dbHelper.insertParticipant("a","pooling 1");
-        dbHelper.insertParticipant("b","pooling 1");
-        dbHelper.insertParticipant("c","pooling 1");
-        dbHelper.insertParticipant("d","pooling 1");
-        dbHelper.insertParticipant("e","pooling 1");
-        dbHelper.insertParticipant("f","pooling 1");
-        dbHelper.insertParticipant("f","pooling 1");
+//        dbHelper.insertPool("pooling 1", "2016.11.28 23:30");
+//        dbHelper.insertPool("pooling 2", "2016.11.28 23:30");
+//        dbHelper.insertPool("pooling 3", "2016.11.28 23:30");
+//        dbHelper.insertPool("pooling 4", "2016.11.28 23:30");
+//        dbHelper.insertPool("pooling 6", "2016.11.28 23:30");
+//        dbHelper.insertParticipant("a","pooling 1");
+//        dbHelper.insertParticipant("b","pooling 1");
+//        dbHelper.insertParticipant("c","pooling 1");
+//        dbHelper.insertParticipant("d","pooling 1");
+//        dbHelper.insertParticipant("e","pooling 1");
+//        dbHelper.insertParticipant("f","pooling 1");
+//        dbHelper.insertParticipant("f","pooling 1");
 
     }
 
