@@ -15,3 +15,5 @@ Todo:
 - [ ] delete a participant
 - [ ] delete a pool
 - [ ] prettify the app
+- [ ] editing a pool or a participant
+- [ ] adding a method to select the number for a participant
