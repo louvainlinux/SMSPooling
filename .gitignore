@@ -1,10 +1,10 @@
 *.iml
 .gradle
 /local.properties
-/.idea/encoding.xml
-/.idea/gradle.xml
-/.idea/misc.xml
-/.idea/.name
+.idea/encoding.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/.name
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
