@@ -1,3 +1,6 @@
+## Important notice
+Because this repository has not seen any activity in more than two years, it has been **archived** by the Louvain-li-Nux team in november 2019. It is now read-only, but you can still fork it. The terms of licence still apply.
+
 # SMSPooling
 
 A basic sms based voting system for android. Initially developped for kap Louvain-li-Nux and for the associations and kap of Louvain-la-Neuve. 
